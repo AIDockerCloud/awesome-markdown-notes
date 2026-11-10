@@ -18,6 +18,7 @@
 - [任务管理 / Todo（自托管）](#任务管理--todo自托管)
 - [已有的同类清单与目录](#已有的同类清单与目录)
 - [收录标准与维护方式](#收录标准与维护方式)
+- [分类目录与产品卡片](#分类目录与产品卡片)
 
 ## 判定基准：Typora 本体
 
@@ -38,6 +39,14 @@
 - [Aropyt](https://github.com/Geekstrange/Aropyt) - 明确以“自由版 Typora”自居的新项目：编辑区即预览区，另加标签页、编辑历史、Vim 模式和插件系统。AGPL-3.0，免费；以 Windows 为主要构建目标，macOS / Linux / Android 同用 Tauri 2 外壳经 CI 构建。
 
 - [TypeOpen](https://github.com/TriHerm/TypeOpen) - 轻量原生 macOS 编辑器，Typora 式实时编辑工作流，AppKit / WebKit 实现，可经 Homebrew 安装。仅 macOS（Apple Silicon）。
+
+- [Tydora](https://github.com/zuorn/Tydora) - 单文件 Markdown 编辑器；四字段未核实，详见 [产品卡片](categories/01-single-file/tydora.md)。
+
+- [solomd](https://github.com/zhitongblog/solomd) - 高频迭代的单文件 Markdown 编辑器，功能面集中在打印、导出、中文输入法与 WebDAV 同步；四字段未核实，详见 [产品卡片](categories/01-single-file/solomd.md)。
+
+- [morrow](https://github.com/StarrySky7D4/morrow) - 处于测试预览阶段的 Markdown 编辑器；目前只有预览版、无正式 Release，入选门槛待核实，详见 [产品卡片](categories/01-single-file/morrow.md)。
+
+- [nomo](https://github.com/nomo-md/nomo) - 单文件 Markdown 编辑器，功能面集中在折叠块、Word 导出与自定义主题；四字段未核实，详见 [产品卡片](categories/01-single-file/nomo.md)。
 
 ## AI 与 Agent 时代的新编辑器
 
@@ -70,6 +79,14 @@
 - [AFFiNE](https://github.com/toeverything/AFFiNE) - 文档、无边白板与多视图数据库合一的工作台，本地优先、可自托管。协议按组件区分：客户端多为 MIT，部分后端 / 企业组件另有 MPL-2.0 与企业版条款，商用前需逐组件确认；不是纯 `.md` 存储。
 
 - [HedgeDoc](https://github.com/hedgedoc/hedgedoc) - 实时协作的 Markdown 笔记（前身 CodiMD / HackMD CE）：多人同编、演示模式与图表渲染。AGPL-3.0；Web 应用，自托管部署；笔记存服务器数据库，强项是协作而不是个人知识库。
+
+- [虎鲸笔记 orca-note](https://github.com/sethyuan/orca-note) - 块式笔记应用，含计算属性与日历视图；公开发布 Release 包但公开仓库长期不推源码，四字段未核实，详见 [产品卡片](categories/03-knowledge-base/orca-note.md)。
+
+- [Anytype](https://github.com/anyproto/anytype-ts) - 以对象与关系网络组织内容的本地优先知识库；四字段未核实，详见 [产品卡片](categories/03-knowledge-base/anytype.md)。
+
+- [edgeever](https://github.com/tianma-if/edgeever) - 自托管知识库，兼对外发布站点、多平台网页剪藏与内置 AI；四字段未核实，详见 [产品卡片](categories/03-knowledge-base/edgeever.md)。
+
+- [tolaria](https://github.com/refactoringhq/tolaria) - 以 vault 为核心、正在做多端架构的 Markdown 笔记应用；四字段未核实，详见 [产品卡片](categories/03-knowledge-base/tolaria.md)。
 
 ## 速记与自托管笔记
 
@@ -136,8 +153,27 @@
 清单的价值在持续验活，不在一次收全。建议按下面几条维护：
 
 - 有正式 Release，且近 6 个月内有提交；纯 fork、已归档、无 Release 的概念项目不收。
-- 每条至少能判定四件事：协议、平台、数据存哪（裸 `.md` / 自有数据库 / 服务器）、AI 形态（内置 / 插件 / MCP / 无）。判定不了的项目先放候选，不进正表。
+- 每条至少能判定四件事：协议、平台、数据存哪（裸 `.md` / 自有数据库 / 服务器）、AI 形态（内置 / 插件 / MCP / 无）。判定不了的项目先放候选，不进正表；经人工确认收录的例外条目，四字段一律显式标注「未核实」，不猜测填充。
 - 同一软件只进一个主分区，跨界的在另一分区一句话指回主条目，不重复写两份介绍——双头维护必然分叉。
 - 每次更新只做两件事：新增通过门槛的项目，以及把停更、归档、改协议的旧条目标注或移出。价格与版本变化快，正文里只写不易过期的结构性信息，价格以官网为准。
 - 任务管理、速记这类相邻品类单独成节，并写清数据真源在哪一端；不因为某个笔记软件带了任务功能，就把它写成任务管理工具，反之亦然。
 - 仓库在 GitHub 上以 `awesome-markdown-notes` 维护，Topics 使用 `markdown`、`note-taking`、`awesome-list`、`ai`、`markdown-editor`，不以任何单一产品名作为仓库名或主 Topic；正文中对具体产品的提及均为指名性比较，不暗示官方关联或背书。
+
+## 分类目录与产品卡片
+
+主清单按用途分层，每条只记能判定的四字段。下面按同一套分类拆出**独立产品卡片**与**分类对比清单**，用来查看单款详情和该类产品的总体情况：
+
+| 分类 | 分类对比清单（含该层全部软件横向对比） |
+| --- | --- |
+| 判定基准：Typora 本体 | [categories/00-baseline](categories/00-baseline/README.md) |
+| 单文件 Markdown 编辑器（Typora 式平替） | [categories/01-single-file](categories/01-single-file/README.md) |
+| AI 与 Agent 时代的新编辑器 | [categories/02-ai-editors](categories/02-ai-editors/README.md) |
+| 知识库与笔记系统 | [categories/03-knowledge-base](categories/03-knowledge-base/README.md) |
+| 速记与自托管笔记 | [categories/04-quick-notes](categories/04-quick-notes/README.md) |
+| 任务管理 / Todo（自托管） | [categories/05-task-management](categories/05-task-management/README.md) |
+| 已有的同类清单与目录 | [categories/06-references](categories/06-references/README.md) |
+
+- 每张卡片统一按四字段（协议 / 平台 / 数据存哪 / AI 形态）判定，判定不了的显式写「—（未核实）」，不猜测填充；卡片另留「待核实」与「进展记录」表。
+- **分类对比表与 [巡检观察名单](categories/_WATCHLIST.md) 共同构成每周核实的对象清单**：新增软件只要在对比表或观察名单登记一行，就会自动进入下一轮检查；名单里的 16 款已于 2026-11-10 全部转入正表，后续新增候选仍须人工确认才升级。新增流程见 [AGENTS.md](AGENTS.md)，卡片格式见 [模板](categories/_TEMPLATE.md)。
+- 每周进展汇总写入 [CHANGELOG.md](CHANGELOG.md)，分类内的进展写入各自 `README.md` 的「进展」表。
+- 本清单与 Typora 无关联，未获其背书或赞助；产品卡片中对具体产品的提及同样均为指名性比较。

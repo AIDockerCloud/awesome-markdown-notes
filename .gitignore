@@ -1,0 +1,10 @@
+# PCMP 派生索引缓存（Markdown 为唯一权威，可随时删除重建）
+ai/.cache/
+
+# 依赖与工具目录
+node_modules/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
