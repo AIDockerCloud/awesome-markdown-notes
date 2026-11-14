@@ -17,23 +17,23 @@
 | SilverBullet | 可编程知识库，Space Lua 写逻辑 | MIT | 浏览器 PWA 为主，可自托管 | 普通 `.md` 文件夹 | —（未核实） | [silverbullet.md](silverbullet.md) |
 | AFFiNE | 文档 + 白板 + 多视图数据库 | **按组件**：客户端多 MIT，部分后端 / 企业组件 MPL-2.0 与企业版 | —（未核实） | 不是纯 `.md`（格式未写） | —（未核实） | [affine.md](affine.md) |
 | HedgeDoc | 实时协作 Markdown（前身 CodiMD） | AGPL-3.0 | Web，自托管 | 服务器数据库 | —（未核实） | [hedgedoc.md](hedgedoc.md) |
-| 虎鲸笔记 orca-note | 块式笔记：计算属性 / 日历视图 / 内置命令型 AI 助手 | —（未核实） | —（未核实） | —（未核实） | —（未核实） | [orca-note.md](orca-note.md) |
-| Anytype | 对象 / 关系网络组织的本地优先知识库 | —（未核实） | —（未核实） | —（未核实） | —（未核实） | [anytype.md](anytype.md) |
-| edgeever | 知识库 + 一键发布站点 + 多平台剪藏 + 内置 AI | —（未核实） | —（未核实） | —（未核实） | —（未核实） | [edgeever.md](edgeever.md) |
-| tolaria | vault + 多端架构（远程后端 / 服务端搜索 / SSE） | —（未核实） | —（未核实） | —（未核实） | —（未核实） | [tolaria.md](tolaria.md) |
+| 虎鲸笔记 orca-note | 块式笔记：计算属性 / 日历视图 / 内置命令型 AI 助手 | 闭源 | —（未核实） | —（未核实） | 内置（命令型 AI 助手） | [orca-note.md](orca-note.md) |
+| Anytype | 对象 / 关系网络组织的本地优先知识库 | 开源（自定义许可；NOASSERTION） | —（未核实） | 本地优先 | —（未核实） | [anytype.md](anytype.md) |
+| edgeever | 知识库 + 一键发布站点 + 多平台剪藏 + 内置 AI | AGPL-3.0 | 多端 | 自托管实例 | 内置 | [edgeever.md](edgeever.md) |
+| tolaria | vault + 多端架构（远程后端 / 服务端搜索 / SSE） | AGPL-3.0 | 多端 | vault + 远程后端 | —（未核实） | [tolaria.md](tolaria.md) |
 
-> [已确认] 2026-11-10 由观察名单转入的后 4 款，经人类确认收录（DEC-006）。四字段全部未判定，按硬约束 10 写 `—（未核实）`，不猜测填充；「一句话定位」摘自旧任务历史报告，属 [推断]，不是已核实的四字段事实。tolaria 因明确有 vault / 同步 / 服务端索引，归本层而非单文件层。
+> [已确认] 2026-11-10 由观察名单转入的后 4 款，经人类确认收录（DEC-006）。2026-11-14 首次联网核实已将 虎鲸笔记（闭源、内置命令型 AI 助手）、Anytype（按开源处理 / 本地优先）、edgeever（AGPL-3.0 / 自托管实例 / 内置 AI）、tolaria（AGPL-3.0 / vault + 远程后端）四字段补实；「一句话定位」摘自旧任务历史报告，属 [推断]。tolaria 因明确有 vault / 同步 / 服务端索引，归本层而非单文件层。
 
 ## 本类整体情况
 
-- [事实] **数据真源是最大分水岭**：原 8 款中，裸 `.md` 2 款（Obsidian vault、SilverBullet）；自有工作空间 1（SiYuan）；自有数据库 2（Joplin、TriliumNext）；分版本 1（Logseq）；服务器数据库 1（HedgeDoc）；AFFiNE 判定为「非纯 `.md`」但具体格式未核实。本轮转入的 4 款全部未核实，12 款中已有判定的仍是 8 款。
+- [事实] **数据真源是最大分水岭**：原 8 款中，裸 `.md` 2 款（Obsidian vault、SilverBullet）；自有工作空间 1（SiYuan）；自有数据库 2（Joplin、TriliumNext）；分版本 1（Logseq）；服务器数据库 1（HedgeDoc）；AFFiNE 判定为「非纯 `.md`」但具体格式未核实。本轮转入 4 款中 edgeever（自托管实例）、tolaria（vault + 远程后端）、Anytype（本地优先）已判定，虎鲸笔记仍待核实；12 款中 11 款已判定，仅虎鲸笔记数据真源待核实。
   - 裸 `.md` 意味着可整体搬走换别的软件打开；数据库型需要显式导出 / 迁移。
   - Joplin 尤其要注意：「笔记以 Markdown 形式组织」说的是语法，不是存储格式。
-- [事实] **AI 形态 10/12 未核实**；已判定的 2 款分别是社区插件（Obsidian）与 OpenAI 兼容接口（SiYuan），都不是内置模型。这是本类当前最大的信息缺口。
+- [事实] **AI 形态 8/12 未核实**；已判定的 4 款：社区插件（Obsidian）、OpenAI 兼容接口（SiYuan）、内置命令型 AI 助手（虎鲸笔记）、内置 AI（edgeever）。其余 8 款待核实。
 - [事实] **组织范式各不相同**：双链图谱（Obsidian）、块引用（SiYuan、Logseq）、层级树（TriliumNext）、平坦文件夹 + 可编程查询（SilverBullet）、多视图工作台（AFFiNE）、实时协作（HedgeDoc）、对象 / 关系网络（Anytype）、块式 + 计算属性（虎鲸笔记）、知识库 + 对外发布（edgeever）、vault + 多端同步（tolaria）。
 - [事实] **协议不都是单一值**：AFFiNE 需逐组件确认，商用前尤其要核对；TriliumNext 只写了「开源」未给协议名。
 - [事实] **显式风险项**：主清单对 Logseq 数据库版保留了官方的数据丢失风险提示，并建议当主力前先备份。
-- [已确认] 2026-11-10 人类确认把虎鲸笔记、Anytype、edgeever、tolaria 由候选转入本类正表（DEC-006），四字段待首轮联网核实补齐；edgeever 的 1.x → 2.0 破坏性变更、tolaria 仅 Alpha 构建，均为重点复核项。
+- [已确认] 2026-11-10 人类确认把虎鲸笔记、Anytype、edgeever、tolaria 由候选转入本类正表（DEC-006），四字段已于 2026-11-14 首轮核实补齐（虎鲸笔记数据真源、Anytype 平台仍待进一步核实）；edgeever 的 1.x → 2.0 破坏性变更属重点复核项，tolaria 仅 Alpha 构建但用户已确认保留正表（DEC-009）。
 - [未决] 3 条链接锚定到具体 release tag 或 `dev` 分支 README，需去版本化。
 - [未决] Logseq 数据库版若脱离 beta，「数据真源」一栏需整体改判，是每周核实的重点观察项。
 
@@ -52,6 +52,18 @@
 | 2026-11-10 | Logseq / TriliumNext | **历史回填（未联网复核）**：Logseq 主线转 DB 版同步可靠性加固、Beta 仍 2.0.2；TriliumNext Web Clipper 首次独立发版，主程序到 v0.106.1，v0.107.0 仍未发 | 同上 |
 | 2026-11-10 | 虎鲸笔记 / Anytype / edgeever / tolaria | [已确认] 由候选观察名单转入本类正表（DEC-006），各建一张产品卡片并补入对比表；tolaria 归类定为知识库层；四字段全部 `—（未核实）` | 用户 2026-11-10 指示 + [`../_WATCHLIST.md`](../_WATCHLIST.md) |
 | 2026-11-10 | — | 定时任务改为每周六 09:00 运行，旧「笔记软件更新进展」任务已删除 | 用户 2026-11-10 指示 |
+| 2026-11-14 | Obsidian | 发 1.15.1（11-12）；闭源按发布镜像仓库判定 | GitHub API（obsidianmd/obsidian-releases） |
+| 2026-11-14 | SiYuan | 首次联网核实：v3.8.10（11-10）/ α v3.8.11-alpha.4（11-13）；AGPL-3.0 | GitHub API（siyuan-note/siyuan） |
+| 2026-11-14 | Joplin | 首次联网核实：v3.7.22（10-28）无 11 月发版，代码活跃（pushed 11-13） | GitHub API（laurent22/joplin） |
+| 2026-11-14 | Logseq | Nightly 仍 20261025、2.0.2 无新发版；代码持续提交（pushed 11-14） | GitHub API（logseq/logseq） |
+| 2026-11-14 | TriliumNext | 发 v0.107.0（11-08），卡住多时的版本终于发版 | GitHub API（TriliumNext/Trilium） |
+| 2026-11-14 | SilverBullet | 首次联网核实：2.12.1（10-12）近 1 月无新发版，代码活跃（pushed 11-13） | GitHub API（silverbulletmd/silverbullet） |
+| 2026-11-14 | AFFiNE | 首次联网核实：仅 canary v2026.11.13（11-13），无稳定版；NOASSERTION 许可 | GitHub API（toeverything/AFFiNE） |
+| 2026-11-14 | HedgeDoc | 首次联网核实：1.12.2（11-04） | GitHub API（hedgedoc/hedgedoc） |
+| 2026-11-14 | 虎鲸笔记 orca-note | 发 1.100.1（11-14）；仍只发 Release 不推源码；AI 形态补实（内置命令型 AI 助手） | GitHub API（sethyuan/orca-note） |
+| 2026-11-14 | Anytype | 发 v0.57.8-alpha（11-10）；license 自定义（NOASSERTION），数据真源 本地优先 | GitHub API（anyproto/anytype-ts） |
+| 2026-11-14 | edgeever | 发 v2.26.0（11-12，自 v2.21.0 高频发版）；四字段补实：AGPL-3.0 / 自托管实例 / 内置 AI | GitHub API（tianma-if/edgeever） |
+| 2026-11-14 | tolaria | 新日更 Alpha alpha-v2026.11.13-alpha.0004（11-13）；协议 AGPL-3.0、数据真源 vault+远程后端确认 | GitHub API（refactoringhq/tolaria） |
 
 ## 新增软件
 

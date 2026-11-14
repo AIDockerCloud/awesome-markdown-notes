@@ -1,7 +1,7 @@
 # Aropyt
 
 > 分类：[单文件 Markdown 编辑器](README.md) · 主清单：[根 README.md](../../README.md)
-> 最近核实：2026-11-10 · 信息来源：根 `README.md`「单文件 Markdown 编辑器」 · 状态：收录
+> 最近核实：2026-11-14 · 信息来源：根 `README.md`「单文件 Markdown 编辑器」 · 状态：收录
 
 ## 一句话定位
 
@@ -11,14 +11,14 @@
 
 | 字段 | 内容 | 核实来源 |
 | --- | --- | --- |
-| 协议 | AGPL-3.0，免费 | 主清单 |
-| 平台 | 以 Windows 为主要构建目标；macOS / Linux / Android 同用 Tauri 2 外壳经 CI 构建 | 主清单 |
-| 数据真源 | —（未核实） | 主清单未给 |
-| AI 形态 | —（未核实） | 主清单未给 |
+| 协议 | AGPL-3.0，免费 | 主清单 + GitHub API（renxiaodaifu/aropyt，2026-11-14） |
+| 平台 | Win / macOS / Linux / Android | Microsoft Store / GitHub 仓库描述（2026-11-14） |
+| 数据真源 | 本地 `.md`（"the file is the truth"，编辑区即预览区） | 仓库描述 / Microsoft Store（2026-11-14） |
+| AI 形态 | 无内置（纯就地渲染编辑器，无 AI 功能） | 仓库描述 / Microsoft Store（2026-11-14） |
 
 ## 要点 [事实]
 
-- 项目：https://github.com/Geekstrange/Aropyt
+- 项目：https://github.com/renxiaodaifu/aropyt（2026-11-14 纠正：原卡内 Geekstrange 为 Microsoft Store 开发者名、非仓库地址）
 - 编辑区即预览区，是本层里与 Typora 手感表述最接近的一条。
 - 「经 CI 构建」不等于各平台都有正式 Release，这一点直接关系本清单的入选门槛。
 
@@ -38,3 +38,4 @@
 | 日期 | 进展 | 来源 |
 | --- | --- | --- |
 | 2026-11-10 | 初版收录，信息核实自主清单 | 根 `README.md` |
+| 2026-11-14 | 首次联网核实：renxiaodaifu/aropyt，~v0.1.9，AGPL-3.0，Win/mac/Linux/Android，本地 .md，无内置 AI；四字段补实；纠正原 Geekstrange 链接 | Microsoft Store + GitHub（renxiaodaifu/aropyt） |

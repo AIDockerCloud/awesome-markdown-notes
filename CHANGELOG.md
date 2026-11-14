@@ -63,3 +63,91 @@
 - [事实] 决策留痕：DEC-005 转 Accepted、DEC-006 新增（Accepted）、DEC-004 时间口径同步；`ai/STATE.md` 的 `revision` 递增至 4。原始历史报告仍留在旧任务工作目录，未复制进仓库。
 - [未决] 8 款新收录软件的四字段与入选门槛（尤其 morrow 只有测试预览版、tolaria 只有 Alpha 构建、虎鲸笔记源码长期不更新）待首轮联网核实；本轮**未做新的联网核实**。
 - [已确认] 2026-11-10 人类逐项确认：DEC-002 / 003 / 004 全部转 Accepted；TypeOpen 保留正表；闭源产品（Typora）入选门槛按官网发布记录判定。三项合并登记为 DEC-007。
+
+## 2026-11-14 · 每周产品进展核实（首次真正联网核实）
+
+- [事实] 本轮是**首个真正联网核实周**：上一轮（2026-11-06 / 11-10）所有版本信息均为历史回填、未联网复核。本次基线对比的是 `categories/_WATCHLIST.md`「上次快照（2026-11-06）」列与 CHANGELOG「上次快照基线（2026-11-06）」表。
+- [事实] **数据源与约束**：GitHub 仓库走 REST API（`api.github.com`，本机代理放行），Typora 走官方中文站 `typoraio.cn/releases/stable.html`（`typora.io` 主站被代理拦截，符合 DEC-007 的 DNS 异常预案）。06-references 链接可达性经本机代理实测。不 clone、不下载二进制。
+- [事实] **API 限流说明**：GitHub 未鉴权 API 单 IP 60 次/小时，本轮后半段（Aropyt / TypeOpen / Nimbalyst / MarkFlowy / 思源 Task Horizon / TaskNotes 精确发版）触发 403，相关版本号改以官网 / 商店页 / 镜像站 / Obsidian Stats 等**二手源**交叉核实，并在表中标注；GitHub 提交活跃度以 `pushed_at` 为准。
+- [事实] **检查对象 = 两处真源并集**：`categories/*/README.md` 对比表 32 款 + `_WATCHLIST.md` 16 款（已全收录，是子集）。其中 8 款（Tydora / solomd / morrow / nomo / 虎鲸笔记 / Anytype / edgeever / tolaria）为 2026-11-10 由候选转正、四字段此前全未判定，本轮重点补齐。
+- [已确认] **人类补两条判定（2026-11-14）**：虎鲸笔记 orca-note 确认为**闭源**（GitHub 无 LICENSE，DEC-008），按 DEC-007 闭源口径以官网 / Release 判定活跃度；Anytype 虽 GitHub 标 NOASSERTION，**按开源处理**（DEC-008）。两者均保留正表。
+- [已确认] **morrow / tolaria 保留正表（2026-11-14）**：morrow 仅测试预览版、无正式 Release，tolaria 仅 Alpha 构建，均按人类明确指示保留正表（DEC-009），入选门槛例外维持，不再作为待确认项。
+
+### 逐款状态对照（2026-11-14 vs 2026-11-06 基线）
+
+| 软件 | 基线（11-06） | 当前（11-14） | 结论 | 更新了什么 / 核实来源 |
+| --- | --- | --- | --- | --- |
+| Typora | 1.14.15 稳定 / 1.14.4-dev | 1.14.15 稳定（typoraio.cn） | 无变化 | 稳定版仍为 1.14.15；闭源按官网发布页判定（DEC-007） |
+| Obsidian | 1.15.0（11-02） | 1.15.1（11-12） | 有更新 | 发 1.15.1 补丁版（obsidianmd/obsidian-releases） |
+| 虎鲸笔记 orca-note | 1.100.0（11-05） | 1.100.1（11-14） | 有更新 | 发 1.100.1；[已确认] 闭源（用户 2026-11-14 确认，DEC-008），仍只发 Release |
+| Anytype | v0.57.7（11-03） | v0.57.8-alpha（11-10） | 有更新 | 发 v0.57.8-alpha；[已确认] 开源（自定义许可 NOASSERTION，用户 2026-11-14 确认按开源处理） |
+| Tydora | v0.3.2（10-12） | v0.3.3（11-10） | 有更新 | 发 v0.3.3；API 确认协议 Apache-2.0 |
+| edgeever | v2.21.0（11-05） | v2.26.0（11-12） | 有更新 | 自 v2.21.0 连续发版至 v2.26.0（高频）；API 确认 AGPL-3.0、内置 AI |
+| TriliumNext | v0.106.1（10-23） | v0.107.0（11-08） | 有更新 | 卡住的 v0.107.0 终于发版 |
+| Blinko | 1.8.9（11-05） | 1.8.9（11-05） | 无变化 | 无新发版、提交也停在 11-05（仍属「未停更」区间，本周无新动静） |
+| memos | 26.11.0（11-01） | 26.11.0（11-01） | 无变化 | 无新发版（提交持续至 11-13） |
+| tolaria | Alpha 2026.11.6.2（11-06） | alpha-v2026.11.13-alpha.0004（11-13） | 有更新 | 新日更 Alpha；API 确认 AGPL-3.0 |
+| MarkText | v0.24.0-rc.1（11-03） | v0.24.0-rc.2（11-13，预发布） | 有更新 | 发 v0.24.0-rc.2；稳定版仍 v0.23.0；提交活跃（11-14） |
+| Logseq | Nightly 20261025 / 2.0.2（10-07） | Nightly 仍 20261025 / 2.0.2 | 无变化（发版） | Nightly 未更新（仍 10-25）、Beta 仍 2.0.2；但代码持续提交（pushed 11-14） |
+| solomd | v5.0.13（11-03） | v5.0.21（11-12） | 有更新 | 9 天内连发 8 个补丁版（v5.0.13→v5.0.21）；API 确认 MIT、本地 .md、内置 AI |
+| NoteGen | v0.39.2（11-01） | v0.39.2（11-01） | 无变化 | 无新发版（提交至 11-11） |
+| morrow | 0.1.9-test.56（09-25） | 仍 0.1.9-test.56（09-25） | 无变化（发版） | 仍只有测试预览版、无正式 Release；仓库 11-12 有零星提交但未发版 |
+| nomo | v0.6.2（10-16） | v0.7.2（11-12） | 有更新 | v0.6.2→v0.7.2；API 确认 AGPL-3.0、本地 .md |
+| Zettlr | （基线无记录） | v4.10.0（11-13） | 首轮核实 | GPL-3.0，活跃；此前未列入对比快照 |
+| ghostwriter | （基线无记录） | 2.1.6（2022-09-14） | 无变化 | 长期停滞；GPL-3.0 经 API 确认 |
+| SiYuan 思源 | （基线无记录） | v3.8.10（11-10）/ α v3.8.11-alpha.4（11-13） | 首轮核实 | AGPL-3.0，活跃 |
+| Joplin | （基线无记录） | v3.7.22（10-28） | 首轮核实 | 最近稳定版 10-28，代码活跃（pushed 11-13）；NOASSERTION 许可 |
+| SilverBullet | （基线无记录） | 2.12.1（10-12） | 首轮核实 | 最近发版 10-12，近 1 月无新发版但代码活跃（pushed 11-13）；MIT |
+| AFFiNE | （基线无记录） | canary v2026.11.13（11-13，仅预发布） | 首轮核实 | 仅 canary 构建、无稳定版；NOASSERTION 许可 |
+| HedgeDoc | （基线无记录） | 1.12.2（11-04） | 首轮核实 | 近期发版 11-04；AGPL-3.0 |
+| flatnotes | （基线无记录） | v5.5.5（2026-08-29） | 首轮核实 | 最近发版 08-29，近 6 个月有提交（最后 08-29），但近 ~2.5 个月无新提交；MIT |
+| OpenTodo | （基线无记录） | OpenTodoApp/OpenTodo v1.4.2（11-10） | 首轮核实 | AGPL-3.0；用户 fork（AIDockerCloud/OpenTodo）pushed 11-11 无发版 |
+| TaskNotes | （基线无记录） | callumalpass/tasknotes v4.18.2（11-12） | 首轮核实 | MIT；Obsidian 插件，活跃 |
+| taskquence | （基线无记录） | 约 2026-09-29 后无更新 | 首轮核实（二手源） | GitHub 仓库未直接定位；据 Obsidian Stats 快照（10-12 刷新）last update 2026-09-29 |
+| 思源 Task Horizon | （基线无记录） | ~v2.1.2（镜像站） | 首轮核实（二手源） | bytemain/siyuan-plugin-task-horizon；GitHub 精确发版因 API 限流未独立核实 |
+| Aropyt | （基线无记录；四字段缺 2 项） | ~v0.1.9（Microsoft Store） | 首轮核实 + 四字段补实 | renxiaodaifu/aropyt（原卡内 Geekstrange 链接为商店开发者名、非仓库，已纠正）；AGPL-3.0、Win/mac/Linux/Android、本地 .md、无内置 AI |
+| TypeOpen | （基线无记录；四字段缺 3 项） | Apache-2.0、仅 macOS（Apple Silicon） | 首轮核实 + 四字段补实 | TriHerm/TypeOpen；最后活动 Oct 12 2026；本地 .md、无内置 AI |
+| MarkFlowy | （基线无记录；协议未写） | v1.3.0（11-07） | 首轮核实 + 协议补实 | drl990114/MarkFlowy；协议「开源（未写）」→ AGPL-3.0 已确认 |
+| Nimbalyst | （基线无记录；MIT 范围待核） | MIT（桌面 + iOS） | 首轮核实 | Nimbalyst/nimbalyst；Win/mac/Linux、本地项目/Git、agent 工作台；MIT 覆盖桌面与 iOS 应用已确认 |
+
+### 06-references 链接可达性（本周实测）
+
+- [事实] 经本机代理实测（2026-11-14）：awesome-markdown、awesome-markdown-editors、awesome-selfhosted、appsgit、markdowneditors.com、markdific、nimbalyst.com 均返回 200；alternativeto.net 与 producthunt.com 返回 403（疑似反爬/拦截，**非明确失效**，下次换 UA 或直连复查）。
+- [事实] 口径 / 立场较 11-10 初版**无变化**；两篇含自家产品的测评文（markdific、nimbalyst）仍保留「立场需注意」折扣提示。
+
+### 上次快照基线（2026-11-14，作为下轮锚点；与 11-06 逐款对比见上表）
+
+| 软件 | 最新 Release（2026-11-14） | 最后提交 / 更新 | 相对 11-06 | 结论 |
+| --- | --- | --- | --- | --- |
+| Typora | 1.14.15 稳定 | 无公开仓库 | 无变化 | 无变化 |
+| Obsidian | 1.15.1（11-12） | 无公开仓库 | 有更新 | 有更新 |
+| 虎鲸笔记 orca-note | 1.100.1（11-14） | 源码停更（只发 Release） | 有更新 | 有更新 |
+| Anytype | v0.57.8-alpha（11-10） | 11-10 | 有更新 | 有更新 |
+| Tydora | v0.3.3（11-10） | 11-10（Apache-2.0） | 有更新 | 有更新 |
+| edgeever | v2.26.0（11-12） | 11-14（AGPL-3.0） | 有更新 | 有更新 |
+| TriliumNext | v0.107.0（11-08） | 11-14（AGPL-3.0） | 有更新 | 有更新 |
+| Blinko | 1.8.9（11-05） | 11-05（GPL-3.0） | 无变化 | 无变化 |
+| memos | 26.11.0（11-01） | 11-13（MIT） | 无变化 | 无变化 |
+| tolaria | alpha-v2026.11.13-alpha.0004（11-13） | 11-14（AGPL-3.0） | 有更新 | 有更新 |
+| MarkText | v0.24.0-rc.2（11-13，预发布）/ v0.23.0 稳定 | 11-14（MIT） | 有更新 | 有更新 |
+| Logseq | Nightly 20261025 / 2.0.2（10-07） | 11-14（AGPL-3.0） | 无变化（发版） | 无变化 |
+| solomd | v5.0.21（11-12） | 11-14（MIT） | 有更新 | 有更新 |
+| NoteGen | v0.39.2（11-01） | 11-11（GPL-3.0） | 无变化 | 无变化 |
+| morrow | 0.1.9-test.56（09-25，测试预览） | 11-12（AGPL-3.0） | 无变化（发版） | 无变化 |
+| nomo | v0.7.2（11-12） | 11-13（AGPL-3.0） | 有更新 | 有更新 |
+| Zettlr | v4.10.0（11-13） | 11-13（GPL-3.0） | 首轮核实 | 有更新 |
+| ghostwriter | 2.1.6（2022-09-14） | 停滞（GPL-3.0） | 无变化 | 无变化 |
+| SiYuan | v3.8.10（11-10） | 11-14（AGPL-3.0） | 首轮核实 | 有更新 |
+| Joplin | v3.7.22（10-28） | 11-13（NOASSERTION） | 首轮核实 | 无变化 |
+| SilverBullet | 2.12.1（10-12） | 11-13（MIT） | 首轮核实 | 无变化 |
+| AFFiNE | canary v2026.11.13（11-13，仅预发布） | 11-13（NOASSERTION） | 首轮核实 | 有更新 |
+| HedgeDoc | 1.12.2（11-04） | 11-13（AGPL-3.0） | 首轮核实 | 有更新 |
+| flatnotes | v5.5.5（2026-08-29） | 08-29（MIT） | 首轮核实 | 无变化 |
+| OpenTodo | v1.4.2（11-10） | 11-11（AGPL-3.0） | 首轮核实 | 有更新 |
+| TaskNotes | v4.18.2（11-12） | 11-12（MIT） | 首轮核实 | 有更新 |
+| taskquence | 约 2026-09-29 | 09-29（MIT，Obsidian 插件） | 首轮核实 | 无变化 |
+| 思源 Task Horizon | ~v2.1.2 | 活跃（SiYuan 插件） | 首轮核实 | 有更新 |
+| Aropyt | ~v0.1.9（11 月） | 活跃（AGPL-3.0） | 首轮核实 | 有更新 |
+| TypeOpen | 无新发版（Apache-2.0） | 最后活动 Oct 12 2026 | 首轮核实 | 无变化 |
+| MarkFlowy | v1.3.0（11-07，AGPL-3.0） | 11-12（AGPL-3.0） | 首轮核实 | 有更新 |
+| Nimbalyst | 无标签 Release（MIT） | 活跃（MIT） | 首轮核实 | 有更新 |

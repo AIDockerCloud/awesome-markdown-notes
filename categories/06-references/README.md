@@ -37,6 +37,7 @@
 | --- | --- | --- | --- |
 | 2026-11-10 | — | 参考资料索引初版建立 | 根 `README.md` |
 | 2026-11-10 | — | 定时任务融合：融合进来的 16 款均为软件，不涉及本目录；本类仍只核实链接可达性与口径 / 立场变化 | [`../_WATCHLIST.md`](../_WATCHLIST.md) |
+| 2026-11-14 | — | 链接可达性实测：7 个返回 200（awesome-markdown / -editors / awesome-selfhosted / appsgit / markdowneditors / markdific / nimbalyst）；alternativeto.net 与 producthunt.com 返回 403（疑似反爬，非明确失效）。口径 / 立场无变化 | 本机代理实测 |
 
 ## 新增资源
 

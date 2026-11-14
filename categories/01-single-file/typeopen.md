@@ -1,7 +1,7 @@
 # TypeOpen
 
 > 分类：[单文件 Markdown 编辑器](README.md) · 主清单：[根 README.md](../../README.md)
-> 最近核实：2026-11-10 · 信息来源：根 `README.md`「单文件 Markdown 编辑器」 · 状态：收录
+> 最近核实：2026-11-14 · 信息来源：根 `README.md`「单文件 Markdown 编辑器」 · 状态：收录
 
 ## 一句话定位
 
@@ -38,3 +38,4 @@
 | 日期 | 进展 | 来源 |
 | --- | --- | --- |
 | 2026-11-10 | 初版收录，信息核实自主清单 | 根 `README.md` |
+| 2026-11-14 | 首次联网核实：TriHerm/TypeOpen，Apache-2.0，仅 macOS（Apple Silicon），本地 .md，无内置 AI；四字段补实；最后活动 Oct 12 2026 | GitHub（TriHerm/TypeOpen） |

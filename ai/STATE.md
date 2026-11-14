@@ -1,13 +1,13 @@
 ---
 pcmp_version: "2.2"
-revision: 5
-updated: 2026-11-10
+revision: 8
+updated: 2026-11-14
 ---
 
 # 项目当前状态与活动任务快照 (STATE.md — Lite)
 
-- **Last Updated**: 2026-11-10
-- **Overall Status**: 待确认项已收口 —— DEC-002 / 003 / 004 全部转 Accepted，新增 DEC-007（Accepted）记录 TypeOpen 保留正表与闭源产品门槛口径；DEC-001 ~ 007 已无 Proposed。**唯一剩余的人类动作是 review 并提交**；首轮真正联网核实由每周六 09:00 的定时任务执行。
+- **Last Updated**: 2026-11-14
+- **Overall Status**: 2026-11-14 完成**首轮真正联网核实**（GitHub API / typoraio.cn）：遍历 32 款对比表对象 + 16 款观察名单，相对 2026-11-06 基线逐款对比，得出 10 款有更新、5 款无新发版（Blinko / memos / Logseq / NoteGen / morrow）、4 款四字段补实（orca-note / Anytype / edgeever / tolaria）；Typora 稳定版无变化。DEC-001 ~ 009 均 Accepted，无 Proposed；DEC-008（虎鲸闭源 / Anytype 开源）、DEC-009（morrow / tolaria 保留正表）已定案。**本轮改动按人类指示提交并推送远程**。
 
 ---
 
@@ -15,18 +15,16 @@ updated: 2026-11-10
 
 > Lite 档位特性：活动任务合并维护在此，不建独立 `TASK.md`。
 
-- **任务名称**：按人类逐项确认收口待确认项（ADR 转正 / TypeOpen 保留 / 闭源门槛口径）
-- **背景与范围**：上一轮汇总出 4 类待确认项，用户 2026-11-10 回复「1都接受」「3 留」「4 typora看官网就可以了」；第 2 项仅询问 git 术语含义，未授权任何改动。本轮只改文档口径，不动清单条目、不做联网核实。
-- **约束与非目标**：本轮不做任何联网核实；不改主清单 `README.md` 现有条目（闭源门槛作为特例记在 `ai/PROJECT.md` 硬约束 4，主清单通用表述不变）；不执行 `git commit`；不改协议原版。
-- **关联文件**：`ai/DECISIONS.md`、`ai/STATE.md`、`ai/PROJECT.md`、`AGENTS.md`、`CHANGELOG.md`、`categories/00-baseline/`、`categories/01-single-file/`、`categories/_WATCHLIST.md`、定时任务提示词
+- **任务名称**：2026-11-14 每周产品进展核实（首轮真正联网）
+- **背景与范围**：按定时任务遍历 `categories/*/README.md` 对比表（32 款）与 `_WATCHLIST.md`（16 款），以 2026-11-06 快照为基线逐款对比（有更新 / 无变化 / 未核实到）；重点补齐 8 款转正软件的四字段。仅做轻量 HTTP 核实，不 clone、不下载二进制。
+- **约束与非目标**：不改主清单 `README.md` 现有条目、不改协议原版、不执行 `git commit`；只写可核实且带来源的事实，核实不到写「未核实到」。
+- **关联文件**：`CHANGELOG.md`、`categories/*/README.md`、`categories/*/<slug>.md`、`categories/_WATCHLIST.md`、`ai/STATE.md`
 - **验收标准**：
-  - [x] DEC-002 / 003 / 004 状态改 Accepted 并补齐确认来源；
-  - [x] 新增 DEC-007（Accepted），三项确认逐条留痕；
-  - [x] TypeOpen 在分类清单与卡片中清除「是否留正表」的悬置表述，记 [已确认] 保留正表；
-  - [x] Typora 口径在 00 分类清单、卡片、硬约束 4、AGENTS 红线 3、_WATCHLIST 备注同步；
-  - [x] `STATE.md` / `CHANGELOG.md` 中「Proposed 待确认」与「阻塞项」表述清干净；
-  - [x] 定时任务提示词同步两条例外，避免每周重复提出；
-  - [x] `ai/STATE.md` 的 `revision` 递增至 5。
+  - [x] `CHANGELOG.md` 追加 2026-11-14 小节，含全部检查对象状态对照表 + 更新「上次快照」基线；
+  - [x] 各分类 `README.md`「进展」表追加本周行；
+  - [x] 11 张有实质变化的产品卡片更新四字段 + 进展记录（Aropyt / TypeOpen / MarkFlowy / Tydora / solomd / morrow / nomo / orca-note / Anytype / edgeever / tolaria）；
+  - [x] `_WATCHLIST.md`「上次快照」列更新为 2026-11-14；
+  - [x] `ai/STATE.md` 的 `revision` 递增至 6。
 
 ---
 
@@ -38,6 +36,9 @@ updated: 2026-11-10
 - [已确认] 2026-11-10 完成两个定时任务融合与历史进展回填，DEC-005 转 Accepted。
 - [已确认] 2026-11-10 完成融合收尾的四项变更，登记为 DEC-006（Accepted）。
 - [已确认] 2026-11-10 人类逐项确认待确认项：DEC-002 / 003 / 004 转 Accepted，新增 DEC-007；TypeOpen 保留正表、Typora 门槛按官网判定。
+- [已确认] 2026-11-14 完成首轮真正联网核实：32 款全部核实，10 款有更新、5 款无新发版；8 款转正软件 + Aropyt / TypeOpen / MarkFlowy 四字段补实（个别平台项仍待核）；CHANGELOG / 各分类进展表 / `_WATCHLIST` 上次快照 / 11 张卡片全部更新。
+- [已确认] 2026-11-14 用户确认：虎鲸笔记**闭源**、Anytype **按开源处理**，均保留正表（DEC-008）；协议字段已同步卡片、分类表、`_WATCHLIST`、`CHANGELOG`。
+- [已确认] 2026-11-14 用户确认 morrow / tolaria **保留正表**（DEC-009），入选门槛例外维持；本轮无剩余待确认项。
 
 ## 进行中 (In Progress)
 
@@ -49,19 +50,20 @@ updated: 2026-11-10
 
 ## 当前风险与焦点 (Current Risks & Focus)
 
-- [事实] **8 款新收录软件的四字段全部未判定**，是当前最大信息缺口；首轮联网核实必须优先补齐。归类依据来自旧任务历史报告，属 [推断]。
-- [事实] **入选门槛需复核**：morrow 只有测试预览版、无正式 Release；tolaria 只有 Alpha 构建；虎鲸笔记公开仓库提交停在 2026-07-10。这三款按硬约束 4 本不满足条件，因人类明确指示（DEC-006）收录，已在卡片「待核实」显式标注。
-- [事实] **本轮与此前各轮都未做联网核实**；仓库里所有版本信息都是历史回填，标注了「未联网复核」，不能当作已核实事实。
-- [事实] **两处巡检真源需保持一致**：`categories/*/README.md` 对比表与 `_WATCHLIST.md` 各有 16 款基线信息，分叉时按硬约束 8 / 13 标记差异并核实来源，不静默覆盖。
-- [已确认] Blinko **未停更**；定时任务提示词已写入此结论，避免每周重复提出。
-- [已确认] TypeOpen **保留正表**、Typora 等闭源产品**按官网发布记录判定活跃度**（DEC-007）；两条例外已同步定时任务提示词，不再作为待确认项提出。
-- [事实] 定时任务每周六 09:00 运行一次；提示词沿用轻量 HTTP / atom feed、不 clone、不下载二进制、不反复重试，本机蜂窝热点流量配额仍是硬约束。
-- [事实] AI 形态仍是存量卡片中缺口最集中的字段；主清单至少 9 条链接锚定到易变目标，「链接去版本化」尚未实施。
-- [事实] 仓库目前只有 `README.md` 被 Git 跟踪，其余约 50 个文件均未纳入版本控制；`.workbuddy/` 是本地工作日志，提交前建议先决定是否忽略。
-- [提议] 8 款新收录软件的归类若经上游核实发现不符，按「不设双真源」口径标记差异并提请确认，不静默改表。
+- [事实] **四字段缺口已大幅收窄**：8 款转正软件 + Aropyt / TypeOpen / MarkFlowy 已补实；01-single-file 齐全度 8/9、03-knowledge-base 11/12。剩余待核：Tydora（平台 / 数据真源 / AI）、nomo（平台）、Anytype（平台 / AI）、tolaria（AI）、ghostwriter（AI）、虎鲸笔记（平台 / 数据真源）。
+- [已确认] **入选门槛例外已定案**：morrow（仅测试预览版）、tolaria（仅 Alpha）均按人类确认保留正表（DEC-009），不转候选、不自动移出；虎鲸笔记已确认闭源（DEC-008），按 DEC-007 以 Release 判定、视为活跃；Anytype 按开源处理（DEC-008）。
+- [事实] **本轮已真正联网核实**（GitHub API / typoraio.cn）；但 GitHub 未鉴权 API 60 次/小时，后半段（Aropyt / TypeOpen / Nimbalyst / MarkFlowy / 思源 Task Horizon / TaskNotes 精确发版）触发 403，相关版本号改用官网 / 商店页 / 镜像站二手源交叉核实并已标注。
+- [事实] **两处巡检真源已同步**：本轮同时更新 `categories/*/README.md` 对比表与 `_WATCHLIST.md` 上次快照列，未发现分叉。
+- [事实] **代理约束**：本机代理放行 `api.github.com` / `raw.githubusercontent.com`，但拦截 `github.com` 主站与 `typora.io`；06-references 中 alternativeto.net / producthunt.com 返回 403（疑似反爬，非明确失效），下周可换 UA 或直连复查。
+- [已确认] Blinko **未停更**（11-05 发 1.8.9）；本周无新发版，仍属正常区间。
+- [已确认] TypeOpen **保留正表**、Typora 等闭源产品**按官网发布记录判定活跃度**（DEC-007）；本周 Typora 经 typoraio.cn 判定为 1.14.15、无变化。
+- [事实] 定时任务每周六 09:00 运行；提示词沿用轻量 HTTP / API、不 clone、不下载二进制、不反复重试，蜂窝热点流量配额仍是硬约束。
+- [事实] 主清单至少 9 条链接锚定到易变目标，「链接去版本化」尚未实施。
+- [事实] `git status` 显示本轮改动均在工作区未提交；`.workbuddy/` 仍为未跟踪目录，提交前建议决定是否加入 `.gitignore`。
 
 ## 下一步即时动作 (Immediate Next Action)
 
 - [未决] 人类 review 本轮产物并提交（本轮与定时任务均不自动 `git commit`）；提交前先决定是否把 `.workbuddy/` 加入 `.gitignore`。
-- [未决] **下周六 09:00** 做首次真正联网核实，以 `CHANGELOG.md` 的 2026-11-06 快照表与 `_WATCHLIST.md` 的「上次快照」列为锚点，优先补齐 8 款新收录软件的四字段与入选门槛。
+- [未决] **下周六 09:00** 以上一轮 2026-11-14 快照为锚点继续逐款核实；优先补齐 Tydora / nomo / Anytype / tolaria / ghostwriter / 虎鲸笔记 剩余字段，并复查 alternativeto / producthunt 链接。
+- [已确认] morrow / tolaria 保留正表（DEC-009）；虎鲸笔记闭源、Anytype 开源（DEC-008），均无剩余待确认项。下一步仅需例行每周巡检。
 - [未决] 若核实发现归类不符或某款确实停更 / 归档，只标注并提请人类确认，不自动移出条目。

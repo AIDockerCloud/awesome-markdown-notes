@@ -1,7 +1,7 @@
 ---
 pcmp_version: "2.2"
-revision: 5
-updated: 2026-11-10
+revision: 7
+updated: 2026-11-14
 ---
 
 # 架构与技术决策记录 (DECISIONS.md — Lite)
@@ -108,3 +108,33 @@ updated: 2026-11-10
 - 理由 (Reason): 用户是仓库作者，有权把「先做出来看看」的试行结构转为正式口径；TypeOpen 与 Typora 都是默认规则无法直接套用的边界情形，与其留着悬置的 [未决] 让每周巡检反复提出，不如一次性定死判定方式并留痕。
 - 备选方案 (Alternatives): 三条 ADR 继续留 Proposed（状态与已生效事实脱节，放弃）；TypeOpen 转候选（用户已明确「留」，放弃）；闭源产品一律按「无提交」判为不活跃（会把仍在发版的 Typora 误判停更，放弃）；为主清单通用门槛加例外脚注（改动主清单现有条目、超出本轮范围，放弃 —— 特例改由 `ai/PROJECT.md` 硬约束 4 承载）。
 - 影响 (Consequences): DEC-001 ~ 007 全部 Accepted，`STATE.md` 的「阻塞项」清空；01 / 00 两处 [未决] 消除；判定口径写进硬约束 4、AGENTS 红线 3、分类清单、产品卡片与 `_WATCHLIST.md`，并同步定时任务提示词，避免每周重复提出。主清单 `README.md` 的通用门槛表述保持不变，特例只在项目上下文层承载。
+
+---
+
+## DEC-008 — 人类确认虎鲸笔记闭源、Anytype 按开源处理（均保留正表）
+
+日期: 2026-11-14 | 状态: Accepted
+- 确认来源: 用户 2026-11-14 原话「虎鲸是闭源的，anytype还是按开源处理，都保留正表」
+- Supersedes: 无（补充 DEC-006 / DEC-007 的收录与判定口径）
+- Superseded-by: 无
+- 复审触发条件 (Review Trigger): 当上游公开 LICENSE / 授权模式发生变化，或闭源 / 开源判定影响入选门槛与活跃度判定方式时复审
+- 背景 (Context): 2026-11-14 首轮联网核实发现 orca-note 的 GitHub 仓库无 LICENSE 文件、Anytype 的 license 字段为 NOASSERTION（非标准 SPDX），初记「疑似闭源 / 待人工核对」，作为待确认项提请人类裁定。
+- 决策 (Decision): ① 虎鲸笔记 orca-note 记**闭源**，按 DEC-007 闭源产品以官网 / Release 发布记录判定活跃度，保留 `03-knowledge-base` 正表；② Anytype 记**开源（自定义许可 / NOASSERTION）**，保留正表；③ 两者均不转候选、不因协议字段调整移出正表。
+- 理由 (Reason): 用户为仓库作者，对上游授权有直接判断。Anytype 虽非标准 SPDX，但项目以开源方式发布、源码公开，按开源处理符合实际；orca-note 不推源码、无 LICENSE，记闭源更准确，也解释了其 GitHub 提交活跃度无参考价值。
+- 备选方案 (Alternatives): Anytype 继续记「自定义许可、待核」（与用户判断不符，放弃）；orca-note 继续记「疑似闭源」（悬置项每周重复提出，放弃）；因协议不明而移出正表（用户明确「都保留正表」，放弃）。
+- 影响 (Consequences): `03-knowledge-base` 协议分布更新（闭源 1、开源自定义许可 1）；orca-note 活跃度改按 Release 判定、不再看源码提交；DEC-001 ~ 008 全部 Accepted。协议字段变化已同步产品卡片、分类对比表、`_WATCHLIST.md` 与 `CHANGELOG.md`。
+
+---
+
+## DEC-009 — 人类确认 morrow / tolaria 保留正表（入选门槛例外维持）
+
+日期: 2026-11-14 | 状态: Accepted
+- 确认来源: 用户 2026-11-14 指示「保留morrow（仅测试预览版）/ tolaria（仅 Alpha）」
+- Supersedes: 无（维持 DEC-006 的收录例外）
+- Superseded-by: 无
+- 复审触发条件 (Review Trigger): 当 morrow 发布正式 Release、tolaria 脱离 Alpha，或两者长期无更新影响收录合理性时复审
+- 背景 (Context): 2026-11-14 首轮联网核实确认 morrow 仍只有测试预览版（0.1.9-test.56）、无正式 Release，tolaria 仍为日更 Alpha；两款按硬约束 4「正式 Release + 近 6 个月提交」本不满足收录条件，作为最后的入选门槛待确认项提请人类裁定。
+- 决策 (Decision): morrow、tolaria **均保留正表**（分别在 `01-single-file` / `03-knowledge-base`），入选门槛按人类明确指示作例外处理，不转候选、不自动移出；例行巡检只记录进展与版本，不再重复提出「是否满足入选门槛」。
+- 理由 (Reason): 用户为仓库作者，有权决定边界对象的收录；两款仍在持续迭代（morrow 有零星提交、tolaria 日更 Alpha），保留观察比直接剔除更有信息价值；一次性定死可避免每周巡检反复提出同一悬置项。
+- 备选方案 (Alternatives): 转入候选区（用户明确「保留」，放弃）；因无正式 Release 直接移出（用户明确「保留」，放弃）；继续每周标记待确认（重复打扰，放弃）。
+- 影响 (Consequences): morrow / tolaria 的 [未决] 入选门槛项消除；DEC-001 ~ 009 全部 Accepted；`STATE.md` 无剩余待确认项（仅剩 review 提交）。

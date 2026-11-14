@@ -8,3 +8,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.swp
+
+# 本地智能体工作日志 / 自动化记忆（保留在本地，不提交进公开仓库；加入忽略 ≠ 删除）
+.workbuddy/

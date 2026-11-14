@@ -43,6 +43,10 @@
 | --- | --- | --- | --- |
 | 2026-11-10 | — | 分类清单与 4 张产品卡片初版建立 | 根 `README.md` |
 | 2026-11-10 | — | 定时任务融合：融合进来的 16 款均为笔记 / 编辑器软件，本类无新增检查对象；「任务真源对照」口径不变 | [`../_WATCHLIST.md`](../_WATCHLIST.md) |
+| 2026-11-14 | OpenTodo | 首次联网核实：OpenTodoApp/OpenTodo v1.4.2（11-10）；用户 fork（AIDockerCloud/OpenTodo）pushed 11-11 无发版；AGPL-3.0 | GitHub API（OpenTodoApp/OpenTodo） |
+| 2026-11-14 | TaskNotes | 首次联网核实：callumalpass/tasknotes v4.18.2（11-12）；MIT；Obsidian 插件，活跃 | GitHub / tasknotes.dev |
+| 2026-11-14 | taskquence | 首次联网核实（二手源）：Obsidian 插件，据 Obsidian Stats 快照（10-12 刷新）last update 2026-09-29；GitHub 仓库未直接定位 | Obsidian Stats（moritzjung.dev） |
+| 2026-11-14 | 思源 Task Horizon | 首次联网核实（二手源）：bytemain/siyuan-plugin-task-horizon，~v2.1.2；GitHub 精确发版因 API 限流未独立核实 | 镜像站 webkkk.net |
 
 ## 新增软件
 
